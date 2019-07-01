@@ -1,16 +1,12 @@
 class RequestHelper{
 
-  constructor(url) {
-    this.url = url;
-  }
-
-  get() {
-    return fetch(this.url)
+  static get(url) {
+    return fetch(url)
       .then((res) => res.json());
   }
 
-  post(payload) {
-    return fetch(this.url, {
+  static post(url, payload) {
+    return fetch(url, {
       method: 'POST',
       body: JSON.stringify(payload),
       headers: { 'Content-Type': 'application/json' }
@@ -19,8 +15,8 @@ class RequestHelper{
   }
 
 
-  put(payload) {
-    return fetch(this.url, {
+  static put(url, payload) {
+    return fetch(url, {
       method: 'PUT',
       body: JSON.stringify(payload),
       headers: { 'Content-Type': 'application/json' }
@@ -28,8 +24,8 @@ class RequestHelper{
       .then((response) => response.json());
   }
 
-  delete(payload) {
-    return fetch(this.url, {
+  static delete(url, payload) {
+    return fetch(url, {
       method: 'DELETE',
       body: JSON.stringify(payload),
       headers: { 'Content-Type': 'application/json' }
