@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Menu from '../menu/Menu';
+import CharacterContainer from '../containers/CharacterContainer';
+import AllCharacterContainer from '../containers/AllCharacterContainer';
+import CreateCharacterContainer from '../containers/CreateCharacterContainer';
 
 class Main extends Component{
   constructor(props){
@@ -22,8 +25,13 @@ class Main extends Component{
   determineRender(){
     if(this.state.menuReveal){
       return <Menu setReveal= {this.setReveal} />
+    } else if(this.state.individualCharacterReveal){
+      return <CharacterContainer />
+    } else if(this.state.allCharacterReveal){
+      return <AllCharacterContainer />
+    } else if(this.state.createCharacterReveal){
+      return <CreateCharacterFormContainer />
     }
-  }
 
   render() {
     return(
