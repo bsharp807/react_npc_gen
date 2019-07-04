@@ -21,7 +21,7 @@ class Main extends Component{
 
   determineRender(){
     if(this.state.menuReveal){
-      return <Menu serReveal= {this.setReveal} />
+      return <Menu setReveal= {this.setReveal} />
     }
   }
 
