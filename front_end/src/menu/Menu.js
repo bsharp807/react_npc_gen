@@ -1,7 +1,7 @@
 import React from 'react';
-import CharacterMenu from '../menu/components/CharacterMenu';
-import CreateMenu from '../menu/components/CreateMenu';
-import RandomMenu from '../menu/components/RandomMenu';
+import CharacterMenu from './components/CharacterMenu';
+import CreateMenu from './components/CreateMenu';
+import RandomMenu from './components/RandomMenu';
 
 const Menu = (props) => {
   return(

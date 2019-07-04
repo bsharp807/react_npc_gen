@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Menu from './Menu';
+import Menu from '../menu/Menu';
 
 class Main extends Component{
   constructor(props){
