@@ -12,11 +12,16 @@ class Main extends Component{
     }
 
     this.determineRender = this.determineRender.bind(this)
+    this.setReveal = this.setReveal.bind(this)
+  }
+
+  setReveal(revealObject){
+    this.setState(revealObject)
   }
 
   determineRender(){
     if(this.state.menuReveal){
-      return <Menu />
+      return <Menu serReveal= {this.setReveal} />
     }
   }
 

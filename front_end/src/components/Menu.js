@@ -1,11 +1,14 @@
 import React from 'react';
+import CharacterMenu from '../menu/components/CharacterMenu';
+import CreateMenu from '../menu/components/CreateMenu';
+import RandomMenu from '../menu/components/RandomMenu';
 
 const Menu = (props) => {
   return(
     <div>
-      <div>Characters</div>
-      <div>Create a Charater</div>
-      <div>Random Character</div>
+      <CharacterMenu />
+      <CreateMenu />
+      <RandomMenu />
     </div>
   )
 }
