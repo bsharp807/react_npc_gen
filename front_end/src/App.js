@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
           <div className="app">
-          DISPLAY
+            DISPLAY
           </div>
     );
   };
@@ -25,7 +25,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(() => {
       RequestHelper.get(configFile.url)
       .then(characters => {
-        return dispatch({
+        dispatch({
           type: 'GET_CHARACTERS',
           characters
         })
