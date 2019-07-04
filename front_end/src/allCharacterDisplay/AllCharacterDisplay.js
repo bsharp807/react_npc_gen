@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
+import CharacterCard from './components/CharacterCard';
 
 class AllCharacterDisplay extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+
+    }
+
+    this.renderCharacters = this.renderCharacters.bind(this)
+  }
+
+  renderCharacters(){
+    return this.props.characters.map((element, index) => {
+      return <CharacterCard character={element} key={index} />
+    })
+  }
+
   render(){
     return(
       <div>
-        All Character Display
+        {this.renderCharacters()}
       </div>
     )
   }
