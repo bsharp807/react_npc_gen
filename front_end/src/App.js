@@ -1,4 +1,3 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Component } from "react";
 import { connect } from "react-redux"
 import React from "react";
@@ -8,7 +7,8 @@ const configFile = require('./config/config');
 
 class App extends Component {
   componentDidMount(){
-    this.props.getData()
+    this.props.getCharacters();
+    this.props.getAttributes();
   }
 
   render() {
@@ -21,13 +21,24 @@ class App extends Component {
 };
 
 const mapDispatchToProps = dispatch => ({
-  getData(){
+  getCharacters(){
     dispatch(() => {
-      RequestHelper.get(configFile.url)
+      RequestHelper.get(configFile.char)
       .then(characters => {
         dispatch({
           type: 'GET_CHARACTERS',
           characters
+        })
+      })
+    })
+  },
+  getAttributes(){
+    dispatch(() => {
+      RequestHelper.get(configFile.att)
+      .then(attributes => {
+        dispatch({
+          type: 'GET_ATTRIBUTES',
+          attributes
         })
       })
     })
