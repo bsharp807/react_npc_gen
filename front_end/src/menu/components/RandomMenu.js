@@ -1,8 +1,15 @@
 import React from 'react';
 
 const RandomMenu = (props) => {
+  const handleClick = () => {props.setReveal(
+    {
+      menuReveal: false,
+      individualCharacterReveal: true
+    }
+  )}
+
   return(
-    <div>Random Character</div>
+    <div onClick= {handleClick}>Random Character</div>
   )
 }
 

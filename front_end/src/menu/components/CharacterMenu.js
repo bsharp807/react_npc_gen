@@ -1,8 +1,15 @@
 import React from 'react';
 
 const CharacterMenu = (props) => {
+  const handleClick = () => {props.setReveal(
+    {
+      menuReveal: false,
+      allCharacterReveal: true
+    }
+  )}
+
   return(
-    <div>Characters</div>
+    <div onClick= {handleClick}>Characters</div>
   )
 }
 
