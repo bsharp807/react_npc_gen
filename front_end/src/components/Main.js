@@ -30,8 +30,9 @@ class Main extends Component{
     } else if(this.state.allCharacterReveal){
       return <AllCharacterContainer />
     } else if(this.state.createCharacterReveal){
-      return <CreateCharacterFormContainer />
+      return <CreateCharacterContainer />
     }
+  }
 
   render() {
     return(

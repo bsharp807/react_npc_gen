@@ -1,4 +1,4 @@
-import AllChacracterDisplay from '../allChacracterDisplay/AllChacracterDisplay';
+import AllCharacterDisplay from '../allCharacterDisplay/AllCharacterDisplay';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
@@ -7,4 +7,4 @@ const mapStateToProps = (state) => {
   }
 };
 
-export default connect(mapStateToProps)(AllChacracterDisplay)
+export default connect(mapStateToProps)(AllCharacterDisplay);

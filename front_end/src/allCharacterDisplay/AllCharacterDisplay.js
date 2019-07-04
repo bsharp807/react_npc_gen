@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class AllChacracterDisplay{
+class AllCharacterDisplay extends Component{
   render(){
     return(
       <div>
@@ -10,4 +10,4 @@ class AllChacracterDisplay{
   }
 }
 
-export default AllChacracterDisplay;
+export default AllCharacterDisplay;
