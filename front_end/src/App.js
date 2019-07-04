@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { connect } from "react-redux"
 import React from "react";
+import Main from './Main';
 
 const RequestHelper = require('./helpers/request_helper');
 const configFile = require('./config/config');
@@ -14,7 +15,7 @@ class App extends Component {
   render() {
     return (
           <div className="app">
-            DISPLAY
+            <Main />
           </div>
     );
   };
