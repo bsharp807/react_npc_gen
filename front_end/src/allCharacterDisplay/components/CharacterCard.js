@@ -1,12 +1,16 @@
 import React from 'react';
+import CardName from './CardName';
+import CardAge from './CardAge';
+import CardRace from './CardRace';
+import CardJob from './CardJob';
 
 const CharacterCard = (props) => {
   return(
     <div>
-      <div>{props.character.first_name} {props.character.last_name}</div>
-      <div>{props.character.race}</div>
-      <div>{props.character.job}</div>
-      <div>{props.character.age}</div>
+      <CardName firstName= {props.character.first_name} lastName= {props.character.lastName}/>
+      <CardRace race={props.character.race} />
+      <CardJob job= {props.character.job} />
+      <CardAge age= {props.character.age} />
     </div>
   )
 }
